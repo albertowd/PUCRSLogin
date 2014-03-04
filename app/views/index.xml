@@ -1,5 +1,19 @@
 <Alloy>
 	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
+		<ImageView image="/appicon.png"></ImageView>
+		<ActivityIndicator id="activityIndicator" message="Comunicando..."/>
+		<Label class="padded">Matrícula:</Label>
+		<TextField class="padded" id="tfRegistry"></TextField>
+		<Label class="padded">Senha:</Label>
+		<TextField class="padded" id="tfPassword"></TextField>
+		<View class="padded" id="vwButtons">
+			<View class="halfWidth">
+				<Button id="btLogin" onClick="login">Login</Button>
+			</View>
+			<View class="halfWidth">
+				<Button id="btLogout" onClick="logout">Logout</Button>
+			</View>
+		</View>
+		<Label class="padded" id="obs">Obs.: o número de matrícula para a autenticação não contém o dígito verificador.</Label>
 	</Window>
 </Alloy>

@@ -9,3 +9,8 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+
+/**
+ * Tempo máximo de resposta das requisições do App.
+ */
+var requestTimeout = 30 * 1000; 
