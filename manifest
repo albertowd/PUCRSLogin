@@ -1,8 +1,8 @@
-#appname: PUCRSLogin
-#publisher: Alberto
-#url: http://www.albertowd.com.br
-#image: appicon.png
-#appid: br.com.albertowd.pucrs.mobile
-#desc: undefined
-#type: mobile
-#guid: 4564d9f2-01c1-455f-ae5b-2319ba1af3f0
+#appname:PUCRSLogin
+#publisher:Alberto
+#url:http://www.albertowd.com.br
+#image:appicon.png
+#appid:br.com.albertowd.pucrs.login
+#desc:not specified
+#type:mobile
+#guid:4564d9f2-01c1-455f-ae5b-2319ba1af3f0

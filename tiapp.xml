@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>br.com.albertowd.pucrs.mobile</id>
+    <id>br.com.albertowd.pucrs.login</id>
     <name>PUCRS Login</name>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <publisher>Alberto</publisher>
     <url>http://www.albertowd.com.br</url>
     <description>not specified</description>
