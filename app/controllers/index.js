@@ -103,31 +103,35 @@ function toggleButtons(enable) {
  * Método para autenticar na rede quando solicitado.
  */
 function login() {
-	toggleButtons(false);
-	var params = {
-		username : $.tfRegistry.value,
-		password : $.tfPassword.value,
-		buttonClicked : 4,
-		err_flag : 0
-	};
-	$.activityIndicator.show();
-	var loginPost = createLoginPost();
-	loginPost.open("POST", "https://wifiportal.pucrs.br/login.html");
-	loginPost.send(params);
+	if (validateFields()) {
+		toggleButtons(false);
+		var params = {
+			username : $.tfRegistry.value,
+			password : $.tfPassword.value,
+			buttonClicked : 4,
+			err_flag : 0
+		};
+		$.activityIndicator.show();
+		var loginPost = createLoginPost();
+		loginPost.open("POST", "https://wifiportal.pucrs.br/login.html");
+		loginPost.send(params);
+	}
 }
 
 /**
  * Método para sair da rede quando solicitado.
  */
 function logout() {
-	toggleButtons(false);
-	var params = {
-		userStatus : 1
-	};
-	$.activityIndicator.show();
-	var logoutPost = createLogoutPost();
-	logoutPost.open("POST", "https://wifiportal.pucrs.br/login.html");
-	logoutPost.send(params);
+	if (validateFields()) {
+		toggleButtons(false);
+		var params = {
+			userStatus : 1
+		};
+		$.activityIndicator.show();
+		var logoutPost = createLogoutPost();
+		logoutPost.open("POST", "https://wifiportal.pucrs.br/login.html");
+		logoutPost.send(params);
+	}
 }
 
 /**
@@ -151,12 +155,29 @@ function parseResult(result) {
 }
 
 /**
+ * Valida os campos do programa.
+ */
+function validateFields() {
+	var validated = true;
+	if ($.tfPassword.value.toString().length < 4) {
+		showMessage("Senha muito curta.");
+		validated = false;
+	}
+	if ($.tfRegistry.value.toString().length < 8) {
+		showMessage("Matrícula muito curta.");
+		validated = false;
+	}
+	return validated;
+}
+
+/**
  * Se já tiver dados salvos, carrega nos campos.
  */
 if (Ti.App.Properties.getString("registry")) {
 	$.tfPassword.value = Ti.App.Properties.getString("password");
 	$.tfRegistry.value = Ti.App.Properties.getString("registry");
 }
+
 /**
  * Inicia o App.
  */
