@@ -1,0 +1,17 @@
+<resources>
+    <string name="about">Aplicativo desenvolvido por Alberto Dietrich e Guilherme Donato, caso o serviço não consiga fazer uma autenticação, ele avisa e se desliga.</string>
+    <string name="app_name">PUCRS Portal Login</string>
+    <string name="login">Autenticar</string>
+    <string name="logo_description">Logo da PUCRS</string>
+    <string name="network_unavailable">Não há conexão com a rede PORTAL.</string>
+    <string name="password_hint">Senha</string>
+    <string name="password_invalid">Digite uma senha para autenticar.</string>
+    <string name="service">Autenticação automática</string>
+    <string name="toast_authenticated">Você já está autenticado na rede.</string>
+    <string name="toast_data_problems">Dados errados ou problema de rede.</string>
+    <string name="toast_problems">Problemas de conexão, verifique sua conexão com a rede PORTAL.</string>
+    <string name="toast_success">Autenticado com sucesso.</string>
+    <string name="toast_used">Seu login já está sendo usado por outro sistema.</string>
+    <string name="username_hint">Matrícula (sem DV)</string>
+    <string name="username_invalid">Matrícula deve ter 8 dígitos.</string>
+</resources>
