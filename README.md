@@ -1,3 +1,7 @@
+# PUCRSLogin
+A tool to login/out from PUCRS wireless network.
+
+Releases:
 1.2
 - Desenvolvido com Android Studio.
 - Não tem mais splah do Titanium.
